@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import caffe
 import path_params
 
-def get_labels(labels, scores, attribute_responses, scene_attributeNames, mode, available_GPU_ID):
+def get_labels(labels, scores, attribute_responses, scene_attributeNames):
 	
 	places_labels = []
 	final_label_list = []
@@ -51,7 +51,7 @@ def get_scene_attribute_responses(scene_attributeValues, fc7):
 
 	return attribute_responses
 	
-def placesCNN(pycaffe_path, model_path, image_files):
+def placesCNN(pycaffe_path, model_path, image_files, mode, available_GPU_ID):
 
 	start = time.time()
 
